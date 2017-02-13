@@ -1,0 +1,8 @@
+/home/pedro/Documentos/dotnet/TcpIpServer01/bin/Debug/netcoreapp1.0/TcpIpServer01.deps.json
+/home/pedro/Documentos/dotnet/TcpIpServer01/bin/Debug/netcoreapp1.0/TcpIpServer01.runtimeconfig.json
+/home/pedro/Documentos/dotnet/TcpIpServer01/bin/Debug/netcoreapp1.0/TcpIpServer01.runtimeconfig.dev.json
+/home/pedro/Documentos/dotnet/TcpIpServer01/bin/Debug/netcoreapp1.0/TcpIpServer01.dll
+/home/pedro/Documentos/dotnet/TcpIpServer01/bin/Debug/netcoreapp1.0/TcpIpServer01.pdb
+/home/pedro/Documentos/dotnet/TcpIpServer01/obj/Debug/netcoreapp1.0/TcpIpServer01.AssemblyInfo.cs
+/home/pedro/Documentos/dotnet/TcpIpServer01/obj/Debug/netcoreapp1.0/TcpIpServer01.dll
+/home/pedro/Documentos/dotnet/TcpIpServer01/obj/Debug/netcoreapp1.0/TcpIpServer01.pdb

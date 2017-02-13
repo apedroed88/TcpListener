@@ -10,9 +10,16 @@ namespace TcpIpServer01
 
         static void Main(string[] args)
         {
-            Server.StartServer(5678);
-            Server.Listener();
-         
+            if (!string.IsNullOrEmpty(args[0]))
+            {
+                Server.StartServer(args[0], 5678);
+                Server.Listener();
+            }
+            else
+            {
+                WriteLine("Favor informar o Ip.");
+            }
+
         }
     }
     class Server
@@ -20,12 +27,12 @@ namespace TcpIpServer01
         private static TcpListener ServerListener { get; set; }
         private static bool Acept { get; set; }
 
-        public static void StartServer(int porta)
+        public static void StartServer(string ip, int porta)
         {
-            ServerListener = new TcpListener(IPAddress.Parse("192.168.1.105"),porta);
+            ServerListener = new TcpListener(IPAddress.Parse(ip), porta);
             ServerListener.Start();
             Acept = true;
-            WriteLine($"O servidor está disponivel na porta {porta}");
+            WriteLine($"O servidor está disponivel em {ip} na porta {porta}");
         }
         public static void Listener()
         {
@@ -44,12 +51,12 @@ namespace TcpIpServer01
                         while (menssagem != null && !menssagem.Contains("quit"))
                         {
                             byte[] data = Encoding.ASCII.GetBytes("Envie uma nova menssage [digite 'quit' para encerrar]");
-                            client.GetStream().Write(data,0,data.Length);
+                            client.GetStream().Write(data, 0, data.Length);
 
                             byte[] buffer = new byte[1024];
-                            client.GetStream().Read(buffer,0,buffer.Length);
+                            client.GetStream().Read(buffer, 0, buffer.Length);
                             menssagem = Encoding.ASCII.GetString(buffer);
-                            WriteLine(menssagem);                            
+                            WriteLine(menssagem);
                         }
                         WriteLine("Encerrando Conexao...");
                         client.Dispose();
